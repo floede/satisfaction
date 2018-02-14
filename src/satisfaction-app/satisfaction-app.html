@@ -1,0 +1,46 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="satisfaction-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAAUEp9G9Oz4_X9Whpjd9vw3MKhswN4nys",
+      authDomain: "tilfredshed.firebaseapp.com",
+      databaseURL: "https://tilfredshed.firebaseio.com",
+      projectId: "firebase-tilfredshed",
+      storageBucket: "firebase-tilfredshed.appspot.com",
+      messagingSenderId: "495926032703"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class SatisfactionApp extends Polymer.Element {
+      static get is() { return 'satisfaction-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'satisfaction-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(SatisfactionApp.is, SatisfactionApp);
+  </script>
+</dom-module>

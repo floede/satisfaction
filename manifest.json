@@ -1,0 +1,7 @@
+{
+  "name": "satisfaction",
+  "short_name": "satisfaction",
+  "description": "A small aplication to add and vote on issues for a team",
+  "start_url": "/",
+  "display": "standalone"
+}
